@@ -156,6 +156,7 @@ namespace Kitaplik_Projesi
             this.BtnGuncelle.TabIndex = 10;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // TxtKitapid
             // 

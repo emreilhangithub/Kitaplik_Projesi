@@ -95,5 +95,31 @@ namespace Kitaplik_Projesi
             MessageBox.Show("Kayıt Silindi");
             listele();
         }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand(
+               "Update Kitaplar set KitapAd=@p1,Yazar=@p2,Tur=@p3,Sayfa=@p4,Durum=@p5 where Kitapid = @p6", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtKitapAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtYazar.Text);
+            komut.Parameters.AddWithValue("@p3", CmbTur.Text);
+            komut.Parameters.AddWithValue("@p4", TxtSayfa.Text);
+
+            if (radioButton1.Checked == true)
+            {
+                komut.Parameters.AddWithValue("@p5", durum);
+            }
+            else
+            {
+                komut.Parameters.AddWithValue("@p5", durum);
+            }
+
+            komut.Parameters.AddWithValue("@p6", TxtKitapid.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kayıt Güncellendi");
+            listele();
+        }
     }
 }
