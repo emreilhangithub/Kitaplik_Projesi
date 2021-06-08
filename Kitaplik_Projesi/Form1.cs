@@ -131,10 +131,18 @@ namespace Kitaplik_Projesi
             DataTable dt = new DataTable();
             OleDbDataAdapter da = new OleDbDataAdapter(komut);
             da.Fill(dt);
+            dataGridView1.DataSource = dt;         
+        }
+        
+
+        private void BtnKitapAra_Click(object sender, EventArgs e)
+        {
+            OleDbCommand komut = new OleDbCommand(
+               "Select * from Kitaplar where KitapAd like '%" + TxtKitapBul.Text + "%' ", baglanti);
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(komut);
+            da.Fill(dt);
             dataGridView1.DataSource = dt;
-
-
-            baglanti.Close();           
         }
     }
 }

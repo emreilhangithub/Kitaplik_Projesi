@@ -51,6 +51,7 @@ namespace Kitaplik_Projesi
             this.TxtKitapBul = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.BtnBul = new System.Windows.Forms.Button();
+            this.BtnKitapAra = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,7 +231,7 @@ namespace Kitaplik_Projesi
             // 
             // TxtKitapBul
             // 
-            this.TxtKitapBul.Location = new System.Drawing.Point(679, 299);
+            this.TxtKitapBul.Location = new System.Drawing.Point(624, 299);
             this.TxtKitapBul.Name = "TxtKitapBul";
             this.TxtKitapBul.Size = new System.Drawing.Size(177, 37);
             this.TxtKitapBul.TabIndex = 20;
@@ -238,7 +239,7 @@ namespace Kitaplik_Projesi
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(565, 302);
+            this.label7.Location = new System.Drawing.Point(510, 302);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(108, 29);
             this.label7.TabIndex = 19;
@@ -246,13 +247,23 @@ namespace Kitaplik_Projesi
             // 
             // BtnBul
             // 
-            this.BtnBul.Location = new System.Drawing.Point(862, 298);
+            this.BtnBul.Location = new System.Drawing.Point(807, 299);
             this.BtnBul.Name = "BtnBul";
-            this.BtnBul.Size = new System.Drawing.Size(112, 42);
+            this.BtnBul.Size = new System.Drawing.Size(76, 42);
             this.BtnBul.TabIndex = 21;
             this.BtnBul.Text = "Bul";
             this.BtnBul.UseVisualStyleBackColor = true;
             this.BtnBul.Click += new System.EventHandler(this.BtnBul_Click);
+            // 
+            // BtnKitapAra
+            // 
+            this.BtnKitapAra.Location = new System.Drawing.Point(902, 298);
+            this.BtnKitapAra.Name = "BtnKitapAra";
+            this.BtnKitapAra.Size = new System.Drawing.Size(76, 42);
+            this.BtnKitapAra.TabIndex = 23;
+            this.BtnKitapAra.Text = "Ara";
+            this.BtnKitapAra.UseVisualStyleBackColor = true;
+            this.BtnKitapAra.Click += new System.EventHandler(this.BtnKitapAra_Click);
             // 
             // Form1
             // 
@@ -260,6 +271,7 @@ namespace Kitaplik_Projesi
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(990, 632);
+            this.Controls.Add(this.BtnKitapAra);
             this.Controls.Add(this.BtnBul);
             this.Controls.Add(this.TxtKitapBul);
             this.Controls.Add(this.label7);
@@ -316,6 +328,7 @@ namespace Kitaplik_Projesi
         private System.Windows.Forms.TextBox TxtKitapBul;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button BtnBul;
+        private System.Windows.Forms.Button BtnKitapAra;
     }
 }
 
