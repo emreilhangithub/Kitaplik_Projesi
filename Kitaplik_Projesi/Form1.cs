@@ -83,5 +83,17 @@ namespace Kitaplik_Projesi
             }
            
         }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            OleDbCommand komutsil = new OleDbCommand(
+               "Delete From Kitaplar where Kitapid = @k1", baglanti);
+            komutsil.Parameters.AddWithValue("k1", TxtKitapid.Text);
+            komutsil.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kayıt Silindi");
+            listele();
+        }
     }
 }
