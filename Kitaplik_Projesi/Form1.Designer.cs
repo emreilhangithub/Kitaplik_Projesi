@@ -48,6 +48,9 @@ namespace Kitaplik_Projesi
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.CmbTur = new System.Windows.Forms.ComboBox();
+            this.TxtKitapBul = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.BtnBul = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +123,7 @@ namespace Kitaplik_Projesi
             // 
             // BtnListele
             // 
-            this.BtnListele.Location = new System.Drawing.Point(566, 22);
+            this.BtnListele.Location = new System.Drawing.Point(571, 8);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(246, 57);
             this.BtnListele.TabIndex = 7;
@@ -130,7 +133,7 @@ namespace Kitaplik_Projesi
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(566, 93);
+            this.BtnKaydet.Location = new System.Drawing.Point(571, 79);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(246, 57);
             this.BtnKaydet.TabIndex = 8;
@@ -140,7 +143,7 @@ namespace Kitaplik_Projesi
             // 
             // BtnSil
             // 
-            this.BtnSil.Location = new System.Drawing.Point(566, 163);
+            this.BtnSil.Location = new System.Drawing.Point(571, 149);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(246, 57);
             this.BtnSil.TabIndex = 9;
@@ -150,7 +153,7 @@ namespace Kitaplik_Projesi
             // 
             // BtnGuncelle
             // 
-            this.BtnGuncelle.Location = new System.Drawing.Point(566, 239);
+            this.BtnGuncelle.Location = new System.Drawing.Point(571, 225);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(246, 57);
             this.BtnGuncelle.TabIndex = 10;
@@ -225,12 +228,41 @@ namespace Kitaplik_Projesi
             this.CmbTur.Size = new System.Drawing.Size(262, 37);
             this.CmbTur.TabIndex = 18;
             // 
+            // TxtKitapBul
+            // 
+            this.TxtKitapBul.Location = new System.Drawing.Point(679, 299);
+            this.TxtKitapBul.Name = "TxtKitapBul";
+            this.TxtKitapBul.Size = new System.Drawing.Size(177, 37);
+            this.TxtKitapBul.TabIndex = 20;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(565, 302);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 29);
+            this.label7.TabIndex = 19;
+            this.label7.Text = "Kitap Ad:";
+            // 
+            // BtnBul
+            // 
+            this.BtnBul.Location = new System.Drawing.Point(862, 298);
+            this.BtnBul.Name = "BtnBul";
+            this.BtnBul.Size = new System.Drawing.Size(112, 42);
+            this.BtnBul.TabIndex = 21;
+            this.BtnBul.Text = "Bul";
+            this.BtnBul.UseVisualStyleBackColor = true;
+            this.BtnBul.Click += new System.EventHandler(this.BtnBul_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ClientSize = new System.Drawing.Size(990, 632);
+            this.Controls.Add(this.BtnBul);
+            this.Controls.Add(this.TxtKitapBul);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.CmbTur);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
@@ -251,7 +283,7 @@ namespace Kitaplik_Projesi
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Kitaplık Projesi";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -281,6 +313,9 @@ namespace Kitaplik_Projesi
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.ComboBox CmbTur;
+        private System.Windows.Forms.TextBox TxtKitapBul;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button BtnBul;
     }
 }
 

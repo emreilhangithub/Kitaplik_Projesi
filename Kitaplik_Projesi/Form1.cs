@@ -121,5 +121,20 @@ namespace Kitaplik_Projesi
             MessageBox.Show("Kayıt Güncellendi");
             listele();
         }
+
+        private void BtnBul_Click(object sender, EventArgs e)
+        {            
+            OleDbCommand komut = new OleDbCommand(
+               "Select * from Kitaplar where KitapAd = @k1", baglanti);
+            komut.Parameters.AddWithValue("@k1", TxtKitapBul.Text);
+
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(komut);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+
+            baglanti.Close();           
+        }
     }
 }
