@@ -45,8 +45,8 @@ namespace Kitaplik_Projesi
             this.TxtKitapAd = new System.Windows.Forms.TextBox();
             this.TxtYazar = new System.Windows.Forms.TextBox();
             this.TxtSayfa = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rdBtnIkıncıEl = new System.Windows.Forms.RadioButton();
+            this.rdBtnPakette = new System.Windows.Forms.RadioButton();
             this.CmbTur = new System.Windows.Forms.ComboBox();
             this.TxtKitapBul = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -191,29 +191,29 @@ namespace Kitaplik_Projesi
             this.TxtSayfa.Size = new System.Drawing.Size(262, 37);
             this.TxtSayfa.TabIndex = 14;
             // 
-            // radioButton1
+            // rdBtnIkıncıEl
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(179, 312);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(118, 33);
-            this.radioButton1.TabIndex = 16;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "İkinci El";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            this.rdBtnIkıncıEl.AutoSize = true;
+            this.rdBtnIkıncıEl.Location = new System.Drawing.Point(179, 312);
+            this.rdBtnIkıncıEl.Name = "rdBtnIkıncıEl";
+            this.rdBtnIkıncıEl.Size = new System.Drawing.Size(118, 33);
+            this.rdBtnIkıncıEl.TabIndex = 16;
+            this.rdBtnIkıncıEl.TabStop = true;
+            this.rdBtnIkıncıEl.Text = "İkinci El";
+            this.rdBtnIkıncıEl.UseVisualStyleBackColor = true;
+            this.rdBtnIkıncıEl.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButton2
+            // rdBtnPakette
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(323, 312);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(118, 33);
-            this.radioButton2.TabIndex = 17;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Pakette";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            this.rdBtnPakette.AutoSize = true;
+            this.rdBtnPakette.Location = new System.Drawing.Point(323, 312);
+            this.rdBtnPakette.Name = "rdBtnPakette";
+            this.rdBtnPakette.Size = new System.Drawing.Size(118, 33);
+            this.rdBtnPakette.TabIndex = 17;
+            this.rdBtnPakette.TabStop = true;
+            this.rdBtnPakette.Text = "Pakette";
+            this.rdBtnPakette.UseVisualStyleBackColor = true;
+            this.rdBtnPakette.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // CmbTur
             // 
@@ -276,8 +276,8 @@ namespace Kitaplik_Projesi
             this.Controls.Add(this.TxtKitapBul);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.CmbTur);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.rdBtnPakette);
+            this.Controls.Add(this.rdBtnIkıncıEl);
             this.Controls.Add(this.TxtSayfa);
             this.Controls.Add(this.TxtYazar);
             this.Controls.Add(this.TxtKitapAd);
@@ -322,8 +322,8 @@ namespace Kitaplik_Projesi
         private System.Windows.Forms.TextBox TxtKitapAd;
         private System.Windows.Forms.TextBox TxtYazar;
         private System.Windows.Forms.TextBox TxtSayfa;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton rdBtnIkıncıEl;
+        private System.Windows.Forms.RadioButton rdBtnPakette;
         private System.Windows.Forms.ComboBox CmbTur;
         private System.Windows.Forms.TextBox TxtKitapBul;
         private System.Windows.Forms.Label label7;

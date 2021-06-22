@@ -31,6 +31,7 @@ namespace Kitaplik_Projesi
         private void Form1_Load(object sender, EventArgs e)
         {
             listele();
+            //radioButton1.Checked = true; //otamatik seçili getirdikki veri tabanında hata almayalım
         }
 
         private void BtnListele_Click(object sender, EventArgs e)
@@ -42,6 +43,23 @@ namespace Kitaplik_Projesi
 
         private void BtnKaydet_Click(object sender, EventArgs e)
         {
+            if
+                (
+                string.IsNullOrEmpty(TxtKitapAd.Text) || string.IsNullOrEmpty(TxtYazar.Text) || string.IsNullOrEmpty(TxtSayfa.Text)
+                || string.IsNullOrEmpty(CmbTur.Text)
+                )
+            {
+                MessageBox.Show("Lütfen tüm alanları doldurunuz doldurunuz eksiksiz doldurunuz");
+                return;
+            }
+
+            if (rdBtnIkıncıEl.Checked == false && rdBtnPakette.Checked == false) //en az biri seçilmek zorunda
+            {
+                MessageBox.Show("Lütfen kitap durumunu seçiniz");
+                return;
+            }
+
+
             baglanti.Open();
             OleDbCommand komut1 = new OleDbCommand("insert into Kitaplar (KitapAd,Yazar,Tur,Sayfa,Durum) values(@p1,@p2,@p3,@p4,@p5)",baglanti);
             komut1.Parameters.AddWithValue("@p1",TxtKitapAd.Text);
@@ -75,17 +93,26 @@ namespace Kitaplik_Projesi
             TxtSayfa.Text = dataGridView1.Rows[secilen].Cells[4].Value.ToString();
             if (dataGridView1.Rows[secilen].Cells[5].Value.ToString() == "True")
             {
-                radioButton2.Checked = true;
+                rdBtnPakette.Checked = true;
             }
             else
             {
-                radioButton1.Checked = true;
+                rdBtnIkıncıEl.Checked = true;
             }
            
         }
 
         private void BtnSil_Click(object sender, EventArgs e)
         {
+            if
+               (
+               string.IsNullOrEmpty(TxtKitapid.Text) 
+               )
+            {
+                MessageBox.Show("Lütfen id alanını doldurunuz eksiksiz doldurunuz");
+                return;
+            }
+
             baglanti.Open();
             OleDbCommand komutsil = new OleDbCommand(
                "Delete From Kitaplar where Kitapid = @k1", baglanti);
@@ -98,6 +125,16 @@ namespace Kitaplik_Projesi
 
         private void BtnGuncelle_Click(object sender, EventArgs e)
         {
+            if
+               (
+                string.IsNullOrEmpty(TxtKitapid.Text) ||  string.IsNullOrEmpty(TxtKitapAd.Text) || string.IsNullOrEmpty(TxtYazar.Text)
+                || string.IsNullOrEmpty(TxtSayfa.Text) || string.IsNullOrEmpty(CmbTur.Text)
+               )
+            {
+                MessageBox.Show("Lütfen tüm alanları doldurunuz doldurunuz eksiksiz doldurunuz");
+                return;
+            }
+
             baglanti.Open();
             OleDbCommand komut = new OleDbCommand(
                "Update Kitaplar set KitapAd=@p1,Yazar=@p2,Tur=@p3,Sayfa=@p4,Durum=@p5 where Kitapid = @p6", baglanti);
@@ -106,7 +143,7 @@ namespace Kitaplik_Projesi
             komut.Parameters.AddWithValue("@p3", CmbTur.Text);
             komut.Parameters.AddWithValue("@p4", TxtSayfa.Text);
 
-            if (radioButton1.Checked == true)
+            if (rdBtnIkıncıEl.Checked == true)
             {
                 komut.Parameters.AddWithValue("@p5", durum);
             }
@@ -123,7 +160,16 @@ namespace Kitaplik_Projesi
         }
 
         private void BtnBul_Click(object sender, EventArgs e)
-        {            
+        {
+            if
+                (
+                string.IsNullOrEmpty(TxtKitapBul.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Kitap arama alanını doldurunuz eksiksiz doldurunuz");
+                return;
+            }
+
             OleDbCommand komut = new OleDbCommand(
                "Select * from Kitaplar where KitapAd = @k1", baglanti);
             komut.Parameters.AddWithValue("@k1", TxtKitapBul.Text);
@@ -137,6 +183,15 @@ namespace Kitaplik_Projesi
 
         private void BtnKitapAra_Click(object sender, EventArgs e)
         {
+            if
+                (
+                string.IsNullOrEmpty(TxtKitapBul.Text)
+                )
+            {
+                MessageBox.Show("Lütfen Kitap arama alanını doldurunuz eksiksiz doldurunuz");
+                return;
+            }
+
             OleDbCommand komut = new OleDbCommand(
                "Select * from Kitaplar where KitapAd like '%" + TxtKitapBul.Text + "%' ", baglanti);
             DataTable dt = new DataTable();
