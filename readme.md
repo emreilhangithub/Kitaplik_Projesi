@@ -2,10 +2,10 @@
 
 ## Proje Tanıtımı 
 
-*Bu projede **.Net** kullanarak masaüstü kitaplık projesi oluşturdum. Veri tabanı işlemlerinde Microsoft Access kullandım. *
+*Bu projede **.Net** kullanarak masaüstü kitaplık projesi oluşturdum. Veri tabanı işlemlerinde Microsoft Access kullandım.*
 
 # Database Yedeği #
-Databse kısmına aşşağıdan ulaşıp kendinize yükleyebilirsiniz.(Kitaplik.mdb) https://github.com/emreilhangithub/Kitaplik_Projesi/blob/master/Kitaplik.mdb
+Database kısmına [buradan](https://github.com/emreilhangithub/Kitaplik_Projesi/blob/master/Kitaplik.mdb) ulaşıp kendinize yükleyebilirsiniz.(Kitaplik.mdb)
 
 # Proje İçeriği #
 
